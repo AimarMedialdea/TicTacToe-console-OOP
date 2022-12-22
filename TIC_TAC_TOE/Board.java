@@ -5,6 +5,9 @@ public class Board {  // save as "Board.java"
    // Define named constants for the grid
    public static final int ROWS = 3;
    public static final int COLS = 3;
+   public String name1;
+   public String name2;
+
 
    // Define properties (package-visible)
    /** A board composes of [ROWS]x[COLS] Cell instances */
@@ -34,6 +37,24 @@ public class Board {  // save as "Board.java"
          }
       }
    }
+
+   public String getName(){
+      return name1;
+   }
+
+   public String getName2(){
+      return name2;
+   }
+
+   public void setName(String newName){
+      this.name1 = newName;
+   }
+
+   public void setName2(String newName2){
+      this.name2 = newName2;
+   }
+
+
 
    /**
     *  The given player makes a move on (selectedRow, selectedCol).

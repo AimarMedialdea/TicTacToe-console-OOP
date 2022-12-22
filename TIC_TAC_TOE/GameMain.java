@@ -59,19 +59,40 @@ public class GameMain {
    public void stepGame() {
       boolean validInput = false;  // for validating input
       do {
-         String icon = currentPlayer.getIcon();
-         System.out.print("Player '" + icon + "', enter your move (row[1-3] column[1-3]): ");
-         int row = in.nextInt() - 1;   // [0-2]
-         int col = in.nextInt() - 1;
-         if (row >= 0 && row < Board.ROWS && col >= 0 && col < Board.COLS
-               && board.cells[row][col].content == Seed.NO_SEED) {
-            // Update cells[][] and return the new game state after the move
-            currentState = board.stepGame(currentPlayer, row, col);
-            validInput = true; // input okay, exit loop
-         } else {
-            System.out.println("This move at (" + (row + 1) + "," + (col + 1)
-                  + ") is not valid. Try again...");
-         }
+
+         Board Nombre = new Board();
+         String identidad;
+         String identidad2;
+
+         if(State.CROSS_WON != null){
+            identidad = in.next();
+            Nombre.setName(identidad); 
+            System.out.print("Player '" + identidad + "', enter your move (row[1-3] column[1-3]): ");
+            int row = in.nextInt() - 1;   // [0-2]
+            int col = in.nextInt() - 1;
+            if (row >= 0 && row < Board.ROWS && col >= 0 && col < Board.COLS
+                  && board.cells[row][col].content == Seed.NO_SEED) {
+               // Update cells[][] and return the new game state after the move
+               currentState = board.stepGame(currentPlayer, row, col);
+               validInput = true; // input okay, exit loop
+            }else if(State.CROSS_WON == null){
+
+               identidad2 = in.next();
+               Nombre.setName(identidad); 
+               System.out.print("Player '" + identidad2 + "', enter your move (row[1-3] column[1-3]): ");
+               int row1 = in.nextInt() - 1;   // [0-2]
+               int col1 = in.nextInt() - 1;
+               if (row >= 0 && row < Board.ROWS && col >= 0 && col < Board.COLS
+                     && board.cells[row][col].content == Seed.NO_SEED) {
+                  // Update cells[][] and return the new game state after the move
+                  currentState = board.stepGame(currentPlayer, row, col);
+                  validInput = true; // input okay, exit loop
+               } else {
+                  System.out.println("This move at (" + (row + 1) + "," + (col + 1)
+                        + ") is not valid. Try again...");
+
+            
+               }
       } while (!validInput);   // repeat until input is valid
    }
 

@@ -10,7 +10,7 @@
  *  however, not supported.
  */
 public enum Seed {   // to save as "Seed.java"
-   CROSS("X"), NOUGHT("O"), NO_SEED(" ");
+   CROSS("\u0298"), NOUGHT("O"), NO_SEED(" ");
 
    // Private variable
    private String icon;
