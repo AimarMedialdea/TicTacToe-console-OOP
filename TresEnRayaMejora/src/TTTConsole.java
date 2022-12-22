@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TTTConsole {
    // Define named constants for:
    //  1. Player: using CROSS and NOUGHT
-   //  2. Cell contents: using CROSS, NOUGHT and NO_SEED
+  
    public static final int CROSS   = 0;
    public static final int NOUGHT  = 1;
    public static final int NO_SEED = 2;
