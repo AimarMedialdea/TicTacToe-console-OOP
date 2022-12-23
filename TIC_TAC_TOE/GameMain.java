@@ -60,17 +60,17 @@ public class GameMain {
       boolean validInput = false;  // for validating input
      
       
-      Board Nombre = new Board();
+      Board nombre = new Board();
       String identidad;
       String identidad1;
-      if(validInput != true){
+      if(currentPlayer == Seed.CROSS){
          identidad = in.next();
-         Nombre.setName(identidad); 
+         nombre.setName1(identidad); 
          System.out.print("Player '" + identidad + "', enter your move (row[1-3] column[1-3]): ");
          validInput = true;
-      }else{
+      }else if (currentPlayer == Seed.NOUGHT){
          identidad1 = in.next();
-         Nombre.setName2(identidad1); 
+         nombre.setName2(identidad1); 
          System.out.print("Player '" + identidad1 + "', enter your move (row[1-3] column[1-3]): ");
          validInput = true;
       }

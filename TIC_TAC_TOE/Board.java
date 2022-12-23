@@ -5,6 +5,9 @@ public class Board {  // save as "Board.java"
    // Define named constants for the grid
    public static final int ROWS = 3;
    public static final int COLS = 3;
+   public String nombre1;
+   public String nombre2;
+
 
    // Define properties (package-visible)
    /** A board composes of [ROWS]x[COLS] Cell instances */
@@ -13,6 +16,22 @@ public class Board {  // save as "Board.java"
    /** Constructor to initialize the game board */
    public Board() {
       initGame();
+   }
+
+   public String getName1(){
+      return nombre1;
+   }
+
+   public String getName2(){
+      return nombre2;
+   }
+
+   public void setName1(String newName1){
+      nombre1 = newName1;
+   }
+
+   public void setName2(String newName2){
+      nombre2 = newName2;
    }
 
    /** Initialize the board (run once) */
