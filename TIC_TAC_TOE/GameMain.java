@@ -58,6 +58,22 @@ public class GameMain {
        Update cells[][] and currentState. */
    public void stepGame() {
       boolean validInput = false;  // for validating input
+     
+      
+      Board Nombre = new Board();
+      String identidad;
+      String identidad1;
+      if(validInput != true){
+         identidad = in.next();
+         Nombre.setName(identidad); 
+         System.out.print("Player '" + identidad + "', enter your move (row[1-3] column[1-3]): ");
+         validInput = true;
+      }else{
+         identidad1 = in.next();
+         Nombre.setName2(identidad1); 
+         System.out.print("Player '" + identidad1 + "', enter your move (row[1-3] column[1-3]): ");
+         validInput = true;
+      }
       do {
          String icon = currentPlayer.getIcon();
          System.out.print("Player '" + icon + "', enter your move (row[1-3] column[1-3]): ");
