@@ -89,4 +89,10 @@ public class Board {  // save as "Board.java"
       }
       System.out.println();
    }
+
+public void setName(String identidad) {
+}
+
+public void setName2(String identidad1) {
+}
 }
